@@ -3,20 +3,32 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1331)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
-* [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
-<!-- default file list end -->
-# How to use the TextFormatString property for multi-column ASPxComboBox
+# Combo Box for ASP.NET Web Forms -  How to format input text for multi-column combo box
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e1331/)**
 <!-- run online end -->
 
+In multi-column mode, the control’s edit box displays the selected row’s values one by one, separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to change the selected item’s output text by a pattern. The pattern can contain literals and indexed placeholders such as “{0}”, “{1}”, and so on.
 
-<p>This example demonstrates how to use the <strong>TextFormatString</strong> property for a multi-column ASPxCombobox. The text of the selected ASPxComboBox item displayed within the input box is formatted by the <strong>TextFormatString</strong> property. This property value is specified according to the selected <strong>ASPxRadioButtonList</strong> item.</p>
+![](combobox-with-formatted-text.png)
 
-<br/>
+## Implementation Details
 
+In this example, a ASPxRadioButtonList control allows users to select a pattern to apply to the combo box text. The [ASPxRadioButtonList.SelectedIndexChanged](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxListEdit.SelectedIndexChanged) event handler sets the [ASPxComboBox.TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property according to the selected pattern.
 
+```cs
+protected void ASPxRadioButtonList1_SelectedIndexChanged(object sender, EventArgs e) {
+    if (ASPxRadioButtonList1.SelectedIndex == 0) { 
+        ASPxComboBox1.TextFormatString = "{0} {1}, {2} Company";   
+    }
+    if (ASPxRadioButtonList1.SelectedIndex == 1) { 
+        ASPxComboBox1.TextFormatString = "{1} {0}, {2} Company";
+    }      
+}
+```
+
+## Files to Review
+
+* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
+* [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
