@@ -9,13 +9,13 @@
 **[[Run Online]](https://codecentral.devexpress.com/e1331/)**
 <!-- run online end -->
 
-In multi-column mode, the control’s edit box displays the selected row’s values one by one, separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to change the selected item’s output text by a pattern. The pattern can contain literals and indexed placeholders such as “{0}”, “{1}”, and so on.
+In multi-column mode, the control’s edit box displays the selected row’s values one by one, separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to change the selected item’s output text by a pattern. The pattern can contain literals and indexed placeholders such as `{0}`, `{1}`, and so on.
 
 ![](combobox-with-formatted-text.png)
 
 ## Implementation Details
 
-In this example, a ASPxRadioButtonList control allows users to select a pattern to apply to the combo box text. The [ASPxRadioButtonList.SelectedIndexChanged](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxListEdit.SelectedIndexChanged) event handler sets the [ASPxComboBox.TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property according to the selected pattern.
+In this example, a radio button list control allows users to select a pattern to apply to the combo box text. The [ASPxRadioButtonList.SelectedIndexChanged](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxListEdit.SelectedIndexChanged) event handler sets the [ASPxComboBox.TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property according to the selected pattern.
 
 ```cs
 protected void ASPxRadioButtonList1_SelectedIndexChanged(object sender, EventArgs e) {
