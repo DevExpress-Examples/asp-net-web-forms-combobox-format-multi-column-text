@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e1331/)**
 <!-- run online end -->
 
-In multi-column mode, the edit box displays the selected row’s values one by one, separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to format the selected item’s output text. The text pattern can contain literals and indexed placeholders such as `{0}`, `{1}`, and so on.
+In multi-column mode, the edit box displays the selected row’s values separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to format the selected item’s output text. The text pattern can contain literals and indexed placeholders such as `{0}`, `{1}`, and so on.
 
 ![](combobox-with-formatted-text.png)
 
