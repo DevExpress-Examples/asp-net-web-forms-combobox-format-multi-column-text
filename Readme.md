@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Combo Box for ASP.NET Web Forms -  How to format input text for multi-column combo box
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128543765/)**
-<!-- run online end -->
 
 In multi-column mode, the edit box displays the selected row’s values separated by a semicolon. Use the [TextFormatString](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxAutoCompleteBoxBase.TextFormatString) property to format the selected item’s output text. The text pattern can contain literals and indexed placeholders such as `{0}`, `{1}`, and so on.
 
